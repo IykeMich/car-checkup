@@ -1,17 +1,39 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+import { Poppins, Raleway, Montserrat } from 'next/font/google';
+import Navbar from "./components/Navbar";
+
+// Load the fonts with specific weights
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: '300', // Light (300)
+  variable: '--font-poppins',
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['400', '700'], // Regular (400) and Bold (700)
+  variable: '--font-raleway',
 });
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500'], // Regular (400) and Medium (500)
+  variable: '--font-montserrat',
+});
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +48,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${raleway.variable} ${montserrat.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

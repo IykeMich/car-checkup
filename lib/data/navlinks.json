@@ -1,0 +1,10 @@
+{
+    "navLinks": [
+        { "name": "Blog", "url": "/Blog"},
+        { "name": "Prices", "url": "/Prices"},
+        {"name": "Report Samples","url": "/Sample"},
+        {"name": "Popular Checks","url": "/popular_checks"},
+        {"name": "FAQ","url": "/FAQ"},
+        {"name": "Contact Us","url": "/Contact"}
+    ]
+}
