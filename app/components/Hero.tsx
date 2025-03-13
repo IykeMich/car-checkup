@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-import Star from '../../public/images/Star.svg'
+import Star from '../../public/images/star.svg'
 import Link from 'next/link';
 // import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
