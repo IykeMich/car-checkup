@@ -47,9 +47,9 @@ export default function Benefits() {
                 Buy a Car History Check for Later
                 </h1>
                 <p className='font-montserrat font-light leading-normal text-sm xl:text-base tracking-wide pt-8'>
-                If you are considering purchasing a vehicle, it's highly recommended that you check its full history beforehand. 
+                If you are considering purchasing a vehicle, it&apos;s highly recommended that you check its full history beforehand. 
                 Failure to do so could result in unexpected issues such as outstanding finance, insurance write-offs, 
-                condition record, police stolen, colour change, plate change which may significantly impact the vehicle's value.
+                condition record, police stolen, colour change, plate change which may significantly impact the vehicle&apos;s value.
                 </p>
                 <div className="mt-12">
                     <CheckCarousel />

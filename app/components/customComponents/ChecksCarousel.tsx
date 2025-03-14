@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
-import { title } from "process";
 import { Button } from "@/components/ui/button";
 
 const checklist: string[] = ["Critical Checks", "Outstanding Checks", "Condition/WriteOff", "Police Stolen", "High Risk", "Mileage Anomaly", "MOT History", "+Important Checks"];
