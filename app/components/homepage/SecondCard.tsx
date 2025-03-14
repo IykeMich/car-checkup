@@ -70,6 +70,10 @@ export default function SecondCard() {
 
                 ))}
             </div>
+
+            <div className="w-full text-center">
+                <p className="font-raleway font-medium hover:underline text-ccOrange animate-pulse cursor-pointer">View All Car Checks</p>
+            </div>
         </main>
     </section>
   )
