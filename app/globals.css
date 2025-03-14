@@ -82,7 +82,10 @@
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .swiper-pagination-bullet-active {
-    background-color: red; /* Custom color for active bullet */
+
 }
+
+.swiper-pagination-bullet-active {
+  background-color: orangered !important;
 }
+

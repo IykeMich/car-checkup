@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import CheckCarousel from '../customComponents/ChecksCarousel'
 
 const benefits: {id:number, title:string, subtitle:string}[] = [
     {id:1, title:"The Most Affordable Car Check - Find Out Instantly", subtitle:"With our rate of just £9.95, not only are we the most affordable car check service in the UK, we provide the most reliable, cheapest car check services in the UK."},
@@ -25,19 +26,37 @@ export default function Benefits() {
                 </h1>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 px-4 md:px-8 lg:px-16 py-12">
-            {benefits.map((benefit) => (
-                <div key={benefit.id} className="inline-flex space-x-2 items-start">
-                    <div>
-                        <Image src="/images/star.svg" alt="star" width={50} height={50}/>
+            <div className="bg-[#FFE0D733]">
+                <div className="grid md:grid-cols-2 gap-8 px-4 md:px-8 lg:px-16 py-12">
+                {benefits.map((benefit) => (
+                    <div key={benefit.id} className="inline-flex space-x-2 items-start">
+                        <div>
+                            <Image src="/images/star.svg" alt="star" width={50} height={50}/>
+                        </div>
+                        <div className="flex flex-col space-y-2 md:space-y-3">
+                            <h1 className='font-montserrat font-medium text-sm lg:text-lg'>{benefit.title}</h1>
+                            <p className='font-montserrat font-light text-xs lg:text-base'>{benefit.subtitle}</p>
+                        </div>
                     </div>
-                    <div className="flex flex-col space-y-2 md:space-y-3">
-                        <h1 className='font-montserrat font-medium text-sm lg:text-lg'>{benefit.title}</h1>
-                        <p className='font-montserrat font-light text-xs lg:text-base'>{benefit.subtitle}</p>
-                    </div>
+                ))}
                 </div>
-            ))}
             </div>
+
+            <div className="md:mx-12 lg:mx-24 trusted pt-8 md:pt-16 flex flex-col text-center">
+                <h1 className="font-raleway font-medium text-lg md:text-xl lg:text-4xl">
+                Buy a Car History Check for Later
+                </h1>
+                <p className='font-montserrat font-light leading-normal text-sm xl:text-base tracking-wide pt-8'>
+                If you are considering purchasing a vehicle, it's highly recommended that you check its full history beforehand. 
+                Failure to do so could result in unexpected issues such as outstanding finance, insurance write-offs, 
+                condition record, police stolen, colour change, plate change which may significantly impact the vehicle's value.
+                </p>
+                <div className="mt-12">
+                    <CheckCarousel />
+                </div>
+            </div>
+
+
         </main>
     </section>
   )

@@ -24,7 +24,7 @@ export default function SecondCard() {
                 </h1>
             </div>
             <div>
-                <p className='font-montserrat font-normal leading-normal text-xs md:text-base xl:text-lg tracking-wide pt-8'>
+                <p className='md:mx-6 lg:mx-12 font-montserrat font-normal leading-normal text-xs md:text-base xl:text-lg tracking-wide pt-8'>
                 Our full vehicle history report is the most comprehensive 
                 and affordable car check service in the UK. It will help you 
                 to make the right decision before buying your next used car. 
@@ -32,7 +32,7 @@ export default function SecondCard() {
                 important checks and critical checks, which include:
                 </p>
             </div>
-            <div className="cards mx-4 md:mx-24 pt-12 md:pt-6 grid grid-cols-1 md:grid-cols-3 pb-8 gap-4 lg:gap-12">
+            <div className="cards mx-4 md:mx-12 lg:mx-24 pt-12 md:pt-6 grid grid-cols-1 md:grid-cols-3 pb-8 gap-4 lg:gap-12">
                 {secondCardsDetails.map((card, digit = 1) => (
                     <div 
                     key={card.id} 
