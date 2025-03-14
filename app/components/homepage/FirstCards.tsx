@@ -19,11 +19,11 @@ export default function FirstCards() {
     return (
         <section className="w-full flex flex-col"> 
             <main className=" mt-16 items-center justify-center text-center">
-                <div className="verify flex justify-center items-center space-x-8">
-                   <Link href="/"> <Image src="/images/homepage/experian.svg" alt="experian" width={100} height={100} 
-                    className="md:w-48 lg:w-80" /> </Link>
-                   <Link href="/"> <Image src="/images/homepage/trustpilot.svg" alt="experian" width={100} height={100} 
-                    className="md:w-48 lg:w-80" /> </Link>
+                <div className="mx-8 md:mx-0  verify flex justify-center items-center space-x-8">
+                   <Link href="/"> <Image src="/images/homepage/experian.svg" alt="experian" width={100} height={200} 
+                    className="w-80" /> </Link>
+                   <Link href="/"> <Image src="/images/homepage/trustpilot.svg" alt="experian" width={100} height={200} 
+                    className="w-80" /> </Link>
                 </div>
                 <div className="mx-12 md:mx-24">
                     <div className="trusted mt-4 md:mt-8">
@@ -35,24 +35,47 @@ export default function FirstCards() {
                             WHY PEOPLE TRUST US
                         </p>
                     </div>
-                    <div className="cards pt-12 md:pt-6 grid grid-cols-1 md:grid-cols-3 justify-center pb-8 gap-4">
+                    <div className="cards pt-12 md:pt-6 grid grid-cols-1 md:grid-cols-3 pb-8 gap-4">
                         {cards.map((card) => (
-                            <div key={card.id} className="card justify-center rounded-md border border-gray-400 hover:border-ccOrange cursor-pointer">
+                            <div 
+                            key={card.id} 
+                            className="card relative group justify-center rounded-md border border-gray-300 bg-white 
+                                        cursor-pointer transition-all duration-300 transform hover:-translate-y-2 
+                                        shadow-md hover:shadow-2xl"
+                            >
+                            {/* Soft White & Gray Glow on Hover */}
+                            {/* <div className="absolute -inset-1 bg-gradient-to-b from-gray-100 via-white to-gray-200 
+                                            opacity-0 group-hover:opacity-50 rounded-lg blur-lg transition-all duration-300"></div> */}
+
+                            {/* <div className="relative z-10 bg-white rounded-md shadow-md group-hover:shadow-[0px_10px_30px_rgba(200,200,200,0.5)]"> */}
+                                {/* Image Section */}
                                 <div className="Image pt-4 w-full mb-4 md:mb-8 flex justify-center h-32 lg:h-48">
-                                    <Image src={card.imageUrl} alt="card" width={200} height={300}
-                                        className="w-36 md:w-64 h-auto"/>
+                                <Image 
+                                    src={card.imageUrl} 
+                                    alt="card" 
+                                    width={200} 
+                                    height={300}
+                                    className="w-36 md:w-64 h-auto"
+                                />
                                 </div>
+
+                                {/* Text Content */}
                                 <div className="p-6">
-                                <h1 className="font-montserrat font-semibold text-sm md:text-lg mb-3 md:mb-6 leading-2 tracking-tight">{card.title}</h1>
+                                <h1 className="font-montserrat font-semibold text-sm md:text-lg mb-3 md:mb-6 leading-2 tracking-tight">
+                                    {card.title}
+                                </h1>
                                 <p className="font-montserrat font-medium text-xs lg:text-base">{card.subtitle}</p>
                                 </div>
+                            {/* </div> */}
                             </div>
+
+
                         ))}
                     </div>
                     <div className="trusted mt-4 md:mt-8">
                         <p className="font-montserrat font-medium text-sm md:text-base xl:text-lg text-ccOrange
                             leading-loose mt-4">
-                            TESTED AND GUARANTEED
+                            TRUSTED AND GUARANTEED
                         </p>
                         <h1 className="font-raleway font-medium text-base md:text-lg lg:text-4xl">
                             Why you should Check your Car with Us
