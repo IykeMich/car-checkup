@@ -14,13 +14,13 @@ export default function SecondCard() {
   return (
     <section className='w-full'>
         <main className="mx-4 flex flex-col justify-center text-center">
-            <div className="md:mx-24 trusted mt-4 flex flex-col text-center">
+            <div className="md:mx-12 lg:mx-24 trusted mt-4 flex flex-col text-center">
                 <p className="font-montserrat font-medium text-sm md:text-base xl:text-lg text-ccOrange
                     leading-loose mt-4">
                     OUR PACKAGES CONTENTS
                 </p>
                 <h1 className="font-raleway font-medium text-lg md:text-xl lg:text-4xl">
-                What's in our car check report?
+                Whats in our car check report?
                 </h1>
             </div>
             <div>
@@ -32,8 +32,8 @@ export default function SecondCard() {
                 important checks and critical checks, which include:
                 </p>
             </div>
-            <div className="cards mx-4 md:mx-24 pt-12 md:pt-6 grid grid-cols-1 md:grid-cols-3 pb-8 gap-4">
-                {secondCardsDetails.map((card) => (
+            <div className="cards mx-4 md:mx-24 pt-12 md:pt-6 grid grid-cols-1 md:grid-cols-3 pb-8 gap-4 lg:gap-12">
+                {secondCardsDetails.map((card, digit = 1) => (
                     <div 
                     key={card.id} 
                     className="card relative group justify-center rounded-md border border-gray-300 bg-white 
@@ -52,16 +52,17 @@ export default function SecondCard() {
                             alt="card" 
                             width={200} 
                             height={300}
-                            className="w-36 md:w-64 h-auto"
+                            className="w-36 md:w-48 h-auto"
                         />
                         </div>
 
                         {/* Text Content */}
                         <div className="p-6">
-                        <h1 className="font-montserrat font-semibold text-sm md:text-lg mb-3 md:mb-6 leading-2 tracking-tight">
+                        <h1 className="font-montserrat font-semibold text-sm md:text-base mb-3 md:mb-6 leading-2 tracking-tight">
                             {card.title}
                         </h1>
-                        <p className="font-montserrat font-medium text-xs lg:text-base">{card.subtitle}</p>
+                        <p className="font-montserrat font-medium text-xs lg:text-sm">{card.subtitle}</p>
+                        <div className="relative flex justify-end w-full font-raleway font-bold text-ccOrange pt-4">0{digit + 1}</div>
                         </div>
                     {/* </div> */}
                     </div>
