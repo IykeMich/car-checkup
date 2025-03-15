@@ -19,14 +19,14 @@ export default function Navbar() {
     return (
         <>
         <main className="w-full">
-            <div className="md:flex items-center justify-between md:p-8 xl:px-12">
+            <div className="flex items-center justify-between px-4 py-2 md:px-8 md:py-4 xl:px-12">
                 {/* Logo */}
                 <div className="Logo">
                    <Link href="/"> <Image className='w-24 md:w-32 lg:w-40' 
                    src={Logo} alt="Logo" width={200} height={200} /></Link>
                 </div>
                 {/* NavLinks */}
-                <div className="navLinks flex gap-3 lg:gap-6 xl:gap-12">
+                <div className="navLinks hidden md:flex gap-3 lg:gap-6 xl:gap-12">
                     {navLinks.map((nav, index) => (
                         <Link key={index} href={nav.url}
                         className='font-montserrat font-normal text-sm lg:text-lg
@@ -36,8 +36,8 @@ export default function Navbar() {
                 {/* Login Button */}
                 <div className="button">
                     <Button className='shadow-sm bg-ccBlue text-white
-                    hover:bg-ccOrange hover:shadow-ccOrange'>
-                        <p className='font-montserrat font-medium !text-sm  lg:text-2xl !p-0 lg:!p-4'>SIGN UP</p>
+                    hover:bg-ccOrange hover:shadow-ccOrange !px-2 !my-0'>
+                        <p className='font-montserrat font-medium !text-[8.6px] md:!text-sm  lg:text-2xl !p-0 lg:!p-4'>SIGN UP</p>
                     </Button>
                 </div>
             </div>
