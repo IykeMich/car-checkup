@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Poppins, Raleway, Montserrat } from 'next/font/google';
 import Navbar from "./components/Navbar";
+import Footer from "./components/customComponents/Footer";
 
 // Load the fonts with specific weights
 const poppins = Poppins({
@@ -52,6 +53,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
