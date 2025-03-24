@@ -71,7 +71,7 @@ export default function Footer() {
             </div>
         </main>
       </section>
-      <section>
+      <section className='pb-12 lg:pb-16'>
         <main className='px-2 md:px-20 lg:px-28 py-6 md:py-12'>
             <div className="images flex items-center justify-between">
                 <div className="pwo">
