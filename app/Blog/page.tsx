@@ -45,9 +45,10 @@ export default function Blog() {
             <h1 className="text-center text-ccBlue text-montserrat font-medium py-12 text-2xl md:text-3xl"> Article </h1>
             <div className="articles flex flex-col gap-12 md:gap-0">
                 {PostData.map((article) => (
+                    
                     <div key={article.id}  className="an_article flex flex-col md:flex-row mb-12">
                         <div className="image_section flex w-full h-[100%] md:w-[100%] rounded-sm overflow-hidden">
-                            <Link href="/">
+                            <Link href={`/blog/${article.id}`}>
                             <Image className='object-cover w-[100%] h-[100%] overflow-hidden' src={article.image} alt="article image" width={400} height={400} />
                             </Link>
                         </div>
