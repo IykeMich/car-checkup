@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import PostData from '@/lib/data/postData.json';
 
-export default function BlogPost({ params }: { params: { id: number } }) {
-  // const article = PostData.find((post) => post.id.toString() === params.id);
-  const article = PostData.find((post) => post.id === params.id);
+export default function BlogPost({ params }: { params: { id: string } }) {
+  const article = PostData.find((post) => post.id.toString() === params.id);
+  // const article = PostData.find((post) => post.id === params.id);
 
   if (!article) {
     return notFound(); // Show 404 page if the blog post is not found
@@ -34,7 +34,7 @@ export default function BlogPost({ params }: { params: { id: number } }) {
           <h2 className="font-raleway font-medium text-xl lg:text-2xl py-2 md:pb-4">
             {article.title2}
           </h2>
-          <p className="font-raleway text-gray-500 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
+          <p className="font-poppins text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
             {article.subtitle2}
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function BlogPost({ params }: { params: { id: number } }) {
           <h2 className="font-raleway font-medium text-xl lg:text-2xl py-2 md:pb-4">
             {article.title3}
           </h2>
-          <p className="font-raleway text-gray-500 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
+          <p className="font-poppins text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
             {article.subtitle3}
           </p>
         </div>
@@ -56,15 +56,15 @@ export default function BlogPost({ params }: { params: { id: number } }) {
           <h2 className="font-raleway font-medium text-xl lg:text-2xl py-2 md:pb-4">
             {article.title4}
           </h2>
-          <p className="font-raleway text-gray-500 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
+          <p className="font-poppins text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
             {article.subtitle4}
           </p>
         </div>
         <div className="fifth_writeup text-start mb-6 md:mb-12">
-          <h2 className="font-raleway font-medium text-xl lg:text-2xl py-2 md:pb-4">
+          <h2 className="font-poppins font-medium text-xl lg:text-2xl py-2 md:pb-4">
             {article.title5}
           </h2>
-          <p className="font-raleway text-gray-500 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
+          <p className="font-raleway text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
             {article.subtitle5}
           </p>
         </div>

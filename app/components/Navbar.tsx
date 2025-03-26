@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 export default function Navbar() {
 
     const navLinks: { name: string; url: string }[] = [
-        { name: "Blog", url: "/Blog" },
-        { name: "Prices", url: "/Prices" },
+        { name: "Blog", url: "/blog" },
+        { name: "Prices", url: "/prices" },
         { name: "Report Samples", url: "/Sample" },
         { name: "Popular Checks", url: "/popular_checks" },
         { name: "FAQ", url: "/FAQ" },
