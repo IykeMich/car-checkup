@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Star from '../../../public/images/star.svg'
+import slugify from 'slugify'
 
 
 interface NewsArticle {
@@ -36,7 +37,7 @@ export default function BlogDetails() {
 
         const fetchNews = async () => {
             try {
-                const response = await fetch(`https://newsapi.org/v2/everything?q=car&apiKey=${newsApiKey}`);
+                const response = await fetch(`https://newsapi.org/v2/everything?q=vehicles&apiKey=${newsApiKey}`);
                 if (!response.ok) throw new Error('Failed to fetch news');
 
                 const data = await response.json();
@@ -44,8 +45,13 @@ export default function BlogDetails() {
                 console.log("API Response Articles:", data.articles); // Log the articles
 
                 // Match article by URL (slug is the URL)
+                // const foundArticle = data.articles.find((article: NewsArticle) =>
+                //     encodeURIComponent(article.url) === slug // Match by encoded URL
+                // );
+
+                // Find the article that matches the slug
                 const foundArticle = data.articles.find((article: NewsArticle) =>
-                    encodeURIComponent(article.url) === slug // Match by encoded URL
+                    slugify(article.title, { lower: true, strict: true }) === slug
                 );
 
                 if (!foundArticle) throw new Error("Article not found");
@@ -64,6 +70,7 @@ export default function BlogDetails() {
     if (isLoading) 
         return (
             <section className='flex justify-center items-center min-h-screen'>
+              <div className="h-0.5 bg-ccAsh w-full"></div>
                 <p className="animate pulse duration-500 text-3xl text-orange-500 font-raleway">Loading News...</p>
             </section>
         );
@@ -80,23 +87,9 @@ export default function BlogDetails() {
         );
     }
 
-    // return (
-    //     <section className="container mx-auto p-6">
-    //         <h1 className="text-3xl font-bold">{article?.title}</h1>
-    //         <p className="text-gray-500">{new Date(article?.publishedAt || "").toLocaleDateString()}</p>
-    //         {article?.urlToImage && (
-    //             <Image src={article.urlToImage} alt={article.title} width={600} height={400} className="w-full h-auto my-4" />
-    //         )}
-    //         <p className="mt-4">{article?.content || "Full article is not available."}</p>
-    //         <a href={article?.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-    //             Read full article on source website
-    //         </a>
-    //     </section>
-    // );
-
     return (
             <section className=''>
-              <div className="h-1.5 bg-ccAsh w-full"></div>
+              {/* <div className="h-0.5 bg-ccAsh w-full"></div> */}
               <main className="mb-16 px-4 md:px-12 lg:px-24">
                 <div className="py-12 md:py-16">
                   <h1 className="text-ccOrange text-2xl md:text-3xl font-bold">{article?.title}</h1>
@@ -147,7 +140,7 @@ export default function BlogDetails() {
                           </div>
                           <div className="review">
                             <Link href="#">
-                            <div className="flex w-full border border-white justify-center p-4 text-sm items-center text-white mt-4">
+                            <div className="flex w-full border border-white justify-center p-4 text-sm items-center text-white mt-4 hover:bg-ccOrange hover:border-none transition duration-100 ease-in">
                               <span>Review us on</span>
                               <span className="px-2"> <Image src="/images/blog/Vector.svg" alt="star" width={15} height={10} /> </span>
                               <span> TrustPilot</span>
@@ -197,7 +190,7 @@ export default function BlogDetails() {
     //               </p>
               </div> 
               */}
-              
+
               </main>
             </section>
     

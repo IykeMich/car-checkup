@@ -38,9 +38,10 @@ export default function FAQ() {
       </div>
 
       {/* Toggle View More / View Less */}
-      <div className="text-center mt-4">
+      <div className="text-center mt-8">
         <Button
-          className="px-4 py-2 !shadow-none !bg-transparent text-black rounded-md hover:bg-transparent hover:underline"
+          className="px-4 py-2 !shadow-none !bg-transparent text-black rounded-md hover:bg-transparent hover:underline
+          font-raleway font-medium text-xl"
           onClick={() => setShowAll(!showAll)}
         >
           {showAll ? "View Less" : "View More"}

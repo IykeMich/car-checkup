@@ -8,7 +8,7 @@ import NewsAPI from '../components/customComponents/NewsAPI'
 export default function Blog() {
   return (
     <section className='mb-16'>
-      <div className='h-1.5 bg-ccAsh w-full' ></div>
+      {/* <div className='h-0.5 bg-ccAsh w-full' ></div> */}
       <main className='px-4 md:px-12 lg:px-24'>
         <div className="recent-posts pt-8 md:pt-16 pb-6 md:pb-12 lg:pb-24">
             <h1 className='pb-12 text-center text-ccOrange font-normal text-base lg:text-xl'>Recent Posts</h1>

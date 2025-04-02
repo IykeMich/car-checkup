@@ -9,16 +9,16 @@ export default function Navbar() {
     const navLinks: { name: string; url: string }[] = [
         { name: "Blog", url: "/blog" },
         { name: "Prices", url: "/prices" },
-        { name: "Report Samples", url: "/Sample" },
+        { name: "Report Samples", url: "/report" },
         { name: "Popular Checks", url: "/popular_checks" },
-        { name: "FAQ", url: "/FAQ" },
+        { name: "FAQ", url: "/faq" },
         { name: "Contact Us", url: "/Contact" }
     ];
     
 
     return (
         <>
-        <main className="w-full">
+        <main className="w-full border-b-2 border-b-ccAsh">
             <div className="flex items-center justify-between px-4 py-2 md:px-8 md:py-4 xl:px-12">
                 {/* Logo */}
                 <div className="Logo">

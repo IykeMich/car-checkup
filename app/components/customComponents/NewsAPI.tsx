@@ -25,7 +25,7 @@ export default function NewsAPI() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch(`https://newsapi.org/v2/everything?q=cars&apiKey=${newsApiKey}`)
+                const response = await fetch(`https://newsapi.org/v2/everything?q=vehicles&apiKey=${newsApiKey}`)
                 if (!response.ok) throw new Error('Failed to fetch news');
                 const data = await response.json();
                 console.log("News API Key:", process.env.NEXT_PUBLIC_NEWS_API);
