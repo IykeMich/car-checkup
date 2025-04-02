@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import NewsAPI from '../components/customComponents/NewsAPI'
-// import PostData from "../../lib/data/postData.json"
-// import { Button } from '@/components/ui/button'
-// import Link from 'next/link'
+import PostData from "../../../lib/data/postData.json"
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Blog() {
   return (
@@ -45,8 +44,7 @@ export default function Blog() {
         <div className='article'>
             <h1 className="text-center text-ccBlue text-montserrat font-medium py-12 text-2xl md:text-3xl"> Article </h1>
             <div className="articles flex flex-col gap-12 md:gap-0">
-                <NewsAPI />
-                {/* {PostData.map((article) => (
+                {PostData.map((article) => (
                     
                     <div key={article.id}  className="an_article flex flex-col md:flex-row mb-12">
                         <div className="image_section flex w-full h-[100%] md:w-[100%] rounded-sm overflow-hidden">
@@ -66,7 +64,7 @@ export default function Blog() {
                             </Link>
                         </div>
                     </div>
-                ))} */}
+                ))}
             </div>
         </div>
       </main>
