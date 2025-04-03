@@ -10,10 +10,10 @@ export default function ContactPage() {
         <div className="words text-center lg:px-8">
           <h1 className="font-raleway font-semibold text-2xl lg:text-4xl text-ccOrange pb-6"> Contact Us </h1>
           <p className="font-montserrat font-normal text-base text-black pb-6"> 
-            If you have any questions or require a VAT invoice, fill out the form below and one of our support agents will get back to you quickly. We're available to help you Monday through Friday between 9am and 5pm, and aim to respond to all enquiries within 24 hours.
+            If you have any questions or require a VAT invoice, fill out the form below and one of our support agents will get back to you quickly. We&apos;re available to help you Monday through Friday between 9am and 5pm, and aim to respond to all enquiries within 24 hours.
           </p>
           <p className="font-montserrat font-medium pb-6">
-            You can also contact us by sending an email to <Link href="mailto:contact@carcheckup.co.uk" className='text-[#491ED0]'>contact@carcheckup.co.uk</Link> or by calling <Link href="tel:+44 (0) 7796 431696" className='text-[#491ED0]' >+44 (0) 7796 431696</Link> during our business hours. We're here to help, so don't hesitate to get in touch!            
+            You can also contact us by sending an email to <Link href="mailto:contact@carcheckup.co.uk" className='text-[#491ED0]'>contact@carcheckup.co.uk</Link> or by calling <Link href="tel:+44 (0) 7796 431696" className='text-[#491ED0]' >+44 (0) 7796 431696</Link> during our business hours. We&apos;re here to help, so don&apos;t hesitate to get in touch!
           </p>
         </div>
 
