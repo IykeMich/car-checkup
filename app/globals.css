@@ -89,3 +89,25 @@
   background-color: orangered !important;
 }
 
+.reportValue1 {
+  @apply py-2 font-normal font-montserrat text-center w-1/2 text-sm md:text-base border-r border-gray-200;
+}
+.reportHeadValue {
+  @apply py-2 font-medium font-raleway text-center w-1/2 text-sm md:text-base border-r border-gray-200;
+}
+.reportValue2 {
+  @apply py-2 font-normal font-montserrat text-center w-1/2 text-sm md:text-base group-hover:bg-green-800 group-hover:text-white;
+}
+.reportValueFull {
+  @apply py-2 font-normal font-montserrat text-center w-full text-sm md:text-base xl:text-lg text-ccOffBlue bg-ccReportAsh;
+}
+.reportHead {
+  @apply font-montserrat py-2 ml-auto text-center font-normal text-base md:text-xl lg:text-2xl leading-relaxed mr-auto;
+}
+
+.pointed-right {
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+.pointed-left {
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+}

@@ -19,6 +19,8 @@ const config: Config = {
 			ccOrange: '#F36103',
 			ccAsh: '#A4AFCE',
 			ccLightAsh: '#FBF9FF',
+			ccReportAsh: '#FBF8FF',
+			ccOffBlue: '#055160',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -71,3 +73,5 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
+
+// , require("tailwind-scrollbar")
