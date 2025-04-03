@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[#45526999]/70"></div>
 
         {/* Contents */}
-      <div className='relative pt-12 pb-4 px-6 md:px-16 lg:px-36 flex flex-col items-center justify-center text-center'>
+      <div className='relative pt-24 md:pt-32 pb-4 px-6 md:px-16 lg:px-36 flex flex-col items-center justify-center text-center'>
         <div className="benefits flex gap-2 md:gap-6 lg:gap-12">
             {benefits.map((benefit, index) => (
             <h4 key={index} className='inline-flex md:space-x-2 text-[9.6px] md:text-base lg:text-lg'>

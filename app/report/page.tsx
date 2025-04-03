@@ -11,7 +11,7 @@ const checks: string[] = [
 
 export default function SampleReport() {
   return (
-    <section>
+    <section className='pt-12 md:pt-16'>
       <main className="py-12 px-4 md:px-12 lg:px-12">
         <div className="3-buttons block md:flex justify-between space-y-4 md:space-y-0 md:gap-x-4 xl:gap-x-12 mb-12">
           {checks.map((checkValue, index) => (

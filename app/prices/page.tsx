@@ -5,7 +5,7 @@ export default function Prices() {
     return (
         <section>
             {/* <div className="h-0.5 bg-ccAsh w-full"></div> */}
-                <main className="mb-16">
+                <main className="pt-8 md:pt-16 mb-16">
                     <div className="px-4 md:px-10 lg:px-24 bg-[#e2e2e22a]">
                         <div className="py-12 md:py-16">
                         <h1 className="text-ccOrange text-2xl md:text-3xl font-bold"> Simple, transparent pricing </h1>

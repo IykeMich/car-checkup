@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <>
-        <main className="w-full border-b-2 border-b-ccAsh">
+        <main className="fixed w-full border-b-2 border-b-ccAsh bg-white z-50 mb-1">
             <div className="flex items-center justify-between px-4 py-2 md:px-8 md:py-4 xl:px-12">
                 {/* Logo */}
                 <div className="Logo">
