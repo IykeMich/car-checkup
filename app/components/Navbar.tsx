@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Logo from '../../public/images/Logo.svg'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button';
+import Hamburger from './customComponents/Hamburger';
 // import { NavLink } from '@/lib/types'
 
 export default function Navbar() {
@@ -35,10 +36,13 @@ export default function Navbar() {
                 </div>
                 {/* Login Button */}
                 <div className="button">
-                    <Button className='shadow-sm bg-ccBlue text-white
+                    <Button className='hidden md:flex shadow-sm bg-ccBlue text-white
                     hover:bg-ccOrange hover:shadow-ccOrange !px-2 !my-0'>
                         <p className='font-montserrat font-medium !text-[8.6px] md:!text-sm  lg:text-2xl !p-0 lg:!p-4'>SIGN UP</p>
                     </Button>
+                    <div className="flex md:hidden"> 
+                        <Hamburger />
+                    </div>
                 </div>
             </div>
         </main>
