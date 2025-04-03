@@ -24,7 +24,7 @@ export default function Hamburger() {
 
                         <nav className="flex flex-col items-center space-y-6 mt-16 text-lg">
                             {navLinks.map((item) => (
-                                <Link key={item.url} href={item.url} onClick={() => setIsOpen(false)}> {item.name} </Link>
+                                <Link key={item.url} href={item.url.toLowerCase()} onClick={() => setIsOpen(false)}> {item.name} </Link>
                             ))}
                         </nav>
 
@@ -43,7 +43,7 @@ export default function Hamburger() {
 }
 
 const navLinks: {name: string, url: string}[] = [
-    {name: "Blog", url: "/blog"},
+    {name: "Blog", url: "/blogs"},
     {name: "Prices", url: "/prices"},
     {name: "Report", url: "/report"},
     {name: "Popular Checks", url: "/popular_checks"},

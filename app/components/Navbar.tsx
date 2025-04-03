@@ -8,7 +8,7 @@ import Hamburger from './customComponents/Hamburger';
 export default function Navbar() {
 
     const navLinks: { name: string; url: string }[] = [
-        { name: "Blog", url: "/blog" },
+        { name: "Blog", url: "/blogs" },
         { name: "Prices", url: "/prices" },
         { name: "Report Samples", url: "/report" },
         { name: "Popular Checks", url: "/popular_checks" },
@@ -29,7 +29,7 @@ export default function Navbar() {
                 {/* NavLinks */}
                 <div className="navLinks hidden md:flex gap-3 lg:gap-6 xl:gap-12">
                     {navLinks.map((nav, index) => (
-                        <Link key={index} href={nav.url}
+                        <Link key={index} href={nav.url.toLowerCase()}
                         className='font-montserrat font-normal text-sm lg:text-lg
                         hover:text-ccOrange hover:underline ease-in animate duration-100'>{nav.name}</Link>
                     ))}

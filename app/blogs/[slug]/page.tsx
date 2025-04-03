@@ -70,7 +70,6 @@ export default function BlogDetails() {
     if (isLoading) 
         return (
             <section className='flex justify-center items-center min-h-screen'>
-              <div className="h-0.5 bg-ccAsh w-full"></div>
                 <p className="animate pulse duration-500 text-3xl text-orange-500 font-raleway">Loading News...</p>
             </section>
         );
@@ -88,7 +87,7 @@ export default function BlogDetails() {
     }
 
     return (
-            <section className=''>
+            <section className='pt-12 md:pt-16'>
               {/* <div className="h-0.5 bg-ccAsh w-full"></div> */}
               <main className="mb-16 px-4 md:px-12 lg:px-24">
                 <div className="py-12 md:py-16">

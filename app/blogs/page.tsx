@@ -5,13 +5,13 @@ import NewsAPI from '../components/customComponents/NewsAPI'
 // import { Button } from '@/components/ui/button'
 // import Link from 'next/link'
 
-export default function Blog() {
+export default function BlogsPage() {
   return (
-    <section className='mb-16'>
+    <section className='pt-16 mb-16'>
       {/* <div className='h-0.5 bg-ccAsh w-full' ></div> */}
       <main className='px-4 md:px-12 lg:px-24'>
         <div className="recent-posts pt-8 md:pt-16 pb-6 md:pb-12 lg:pb-24">
-            <h1 className='pb-12 text-center text-ccOrange font-normal text-base lg:text-xl'>Recent Posts</h1>
+            <h1 className='pb-12 text-center text-ccOrange font-normal text-xl lg:text-2xl'>Recent Posts</h1>
             <div className="the-posts flex flex-col md:flex-row gap-6 md:gap-0 md:space-x-6">
                 <div className="cursor-pointer rounded-2xl md:rounded-3xl inline-flex flex-col border">
                     <div className="image w-full">
