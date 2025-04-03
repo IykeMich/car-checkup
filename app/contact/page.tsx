@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import React from 'react'
-import {useForm} from "react-hook-form"
-import {toast} from "react-toastify"
+// import {useForm} from "react-hook-form"
+// import {toast} from "react-toastify"
 export default function ContactPage() {
   return (
     <section className="pt-16 md:pt-24 lg:pt-36">
