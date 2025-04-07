@@ -58,8 +58,8 @@ export default function BrandModels() {
                 {/* {paginatedData.slice(0, showFullVehicle ? vehicles.length: 5).map((vehicle) => ( */}
                 {paginatedModelList.map((list, index) => (
                     <Link href={`/report`} key={index}  className="vehicle inline-flex text-center group cursor-pointer">
-                        <div className="py-2 text-xs md:text-sm lg:text-base font-montserrat w-2/5 font-medium bg-[#FFC439] text-white group-hover:bg-green-600 group-hover:text-white">{list.year}</div>
-                        <div className="py-2 text-xs md:text-sm lg:text-base font-raleway w-3/5 font-light border !border-s-none group-hover:bg-green-600 group-hover:text-white">{list.reg_number}</div>
+                        <div className="py-2 text-sm lg:text-base font-montserrat w-1/5 md:w-2/5 font-medium bg-[#FFC439] text-white group-hover:bg-green-600 group-hover:text-white">{list.year}</div>
+                        <div className="py-2 text-sm lg:text-base font-raleway w-4/5 md:w-3/5 font-light border !border-s-none group-hover:bg-green-600 group-hover:text-white">{list.reg_number}</div>
                     </Link>
                 ))}
 

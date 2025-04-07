@@ -78,7 +78,7 @@ export default function BlogDetails() {
 
     if (error) {
         return (
-        <main>
+        <main className='pt-12 md:pt-16'>
           <BlogPost params={{ id:"1" }} />
         </main>
             // <section className="flex flex-col justify-center items-center min-h-screen text-center">
