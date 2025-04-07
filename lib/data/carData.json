@@ -3,7 +3,7 @@
       {
         "brand_id": "1",
         "name": "Toyota",
-        "logo_src": "/images/brands/toyota.png",
+        "logo_src": "/images/brands/toyota.svg",
         "vehicle_num": 245,
         "models": [
           {
@@ -28,7 +28,7 @@
       {
         "brand_id": "2",
         "name": "Honda",
-        "logo_src": "/images/brands/honda.png",
+        "logo_src": "/images/brands/honda.svg",
         "vehicle_num": 198,
         "models": [
           {
@@ -44,7 +44,7 @@
       {
         "brand_id": "3",
         "name": "Ford",
-        "logo_src": "/images/brands/ford.png",
+        "logo_src": "/images/brands/ford.svg",
         "vehicle_num": 167,
         "models": [
           {
@@ -59,7 +59,7 @@
       {
         "brand_id": "4",
         "name": "BMW",
-        "logo_src": "/images/brands/bmw.png",
+        "logo_src": "/images/brands/bmw.svg",
         "vehicle_num": 134,
         "models": [
           {
@@ -74,7 +74,7 @@
       {
         "brand_id": "5",
         "name": "Mercedes",
-        "logo_src": "/images/brands/mercedes.png",
+        "logo_src": "/images/brands/mercedes.svg",
         "vehicle_num": 112,
         "models": [
           {
@@ -89,7 +89,7 @@
       {
         "brand_id": "6",
         "name": "Volkswagen",
-        "logo_src": "/images/brands/vw.png",
+        "logo_src": "/images/brands/vw.svg",
         "vehicle_num": 189,
         "models": [
           {
@@ -104,7 +104,7 @@
       {
         "brand_id": "7",
         "name": "Audi",
-        "logo_src": "/images/brands/audi.png",
+        "logo_src": "/images/brands/audi.svg",
         "vehicle_num": 145,
         "models": [
           {
@@ -119,7 +119,7 @@
       {
         "brand_id": "8",
         "name": "Hyundai",
-        "logo_src": "/images/brands/hyundai.png",
+        "logo_src": "/images/brands/hyundai.svg",
         "vehicle_num": 156,
         "models": [
           {
@@ -134,7 +134,7 @@
       {
         "brand_id": "9",
         "name": "Kia",
-        "logo_src": "/images/brands/kia.png",
+        "logo_src": "/images/brands/kia.svg",
         "vehicle_num": 132,
         "models": [
           {
@@ -149,7 +149,7 @@
       {
         "brand_id": "10",
         "name": "Nissan",
-        "logo_src": "/images/brands/nissan.png",
+        "logo_src": "/images/brands/nissan.svg",
         "vehicle_num": 178,
         "models": [
           {
@@ -164,7 +164,7 @@
       {
         "brand_id": "11",
         "name": "Chevrolet",
-        "logo_src": "/images/brands/chevrolet.png",
+        "logo_src": "/images/brands/chevrolet.svg",
         "vehicle_num": 123,
         "models": [
           {
@@ -179,7 +179,7 @@
       {
         "brand_id": "12",
         "name": "Tesla",
-        "logo_src": "/images/brands/tesla.png",
+        "logo_src": "/images/brands/tesla.svg",
         "vehicle_num": 95,
         "models": [
           {
@@ -194,7 +194,7 @@
       {
         "brand_id": "13",
         "name": "Subaru",
-        "logo_src": "/images/brands/subaru.png",
+        "logo_src": "/images/brands/subaru.svg",
         "vehicle_num": 108,
         "models": [
           {
@@ -209,7 +209,7 @@
       {
         "brand_id": "14",
         "name": "Mazda",
-        "logo_src": "/images/brands/mazda.png",
+        "logo_src": "/images/brands/mazda.svg",
         "vehicle_num": 141,
         "models": [
           {
@@ -224,7 +224,7 @@
       {
         "brand_id": "15",
         "name": "Jeep",
-        "logo_src": "/images/brands/jeep.png",
+        "logo_src": "/images/brands/jeep.svg",
         "vehicle_num": 115,
         "models": [
           {

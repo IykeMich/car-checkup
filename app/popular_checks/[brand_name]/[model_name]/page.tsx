@@ -5,6 +5,7 @@ import { useState } from "react";
 import carData from "../../../../lib/data/carData.json"
 import Link from "next/link";
 import PremiumChecks from "../../../components/customComponents/PremiumChecks"
+import Image from "next/image";
 
 export default function BrandModels() {
     const { brand_name, model_name } = useParams();
@@ -40,12 +41,18 @@ export default function BrandModels() {
         <main className={`mx-3 md:mx-12 lg:mx-24 py-12`}>
 
             <PremiumChecks />
-            <div className={` headerWords w-full flex flex-col text-start space-y-4 `}>
+            <div className="flex items-start lg:items-center mr-4 md:mr-8 lg:mr-12 space-x-2 md:space-x-0">
+                <div className={` headerWords w-full flex flex-col text-start space-y-1 md:space-y-4 `}>
                 <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>All <Link href={`/popular_checks/${brand.name}`}>{brand.name.toUpperCase()}</Link> {model.model_name} Models </h1>
                 <h1 className='font-raleway font-normal text-sm md:text-base lg:text-lg '>
-                Explore the history of popular vehicle checks by make, model, and registration number in the list below.
-                </h1>
+                  Click on the models to reveal related vehicle checks.
+                  </h1>
+                </div>
+                <div className="logo_src">
+                  <Image src={brand.logo_src} alt={brand.name} width={100} height={150} className="w-12 md:w-24 lg:w-36 h-auto" />
+                </div>
             </div>
+          
 
             <div className="vehicles mt-12 flex flex-col gap-4">
                 {/* {paginatedData.slice(0, showFullVehicle ? vehicles.length: 5).map((vehicle) => ( */}

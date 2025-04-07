@@ -5,6 +5,7 @@ import { useState } from "react";
 import carData from "../../../lib/data/carData.json"
 import Link from "next/link";
 import PremiumChecks from "../../components/customComponents/PremiumChecks"
+import Image from "next/image";
 
 export default function ModelList() {
     const {brand_name} = useParams();
@@ -38,11 +39,16 @@ export default function ModelList() {
         <main className={`mx-3 md:mx-12 lg:mx-24 py-12`}>
 
             <PremiumChecks />
-            <div className={` headerWords w-full flex flex-col text-start space-y-4 `}>
-                <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>Popular {brand.name.toUpperCase()} Models</h1>
-                <h1 className='font-raleway font-normal text-sm md:text-base lg:text-lg '>
-                Click on the models to reveal related vehicle checks.
-                </h1>
+            <div className="flex items-center md:mr-12">
+                <div className={` headerWords w-full flex flex-col text-start space-y-4 `}>
+                  <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>Popular {brand.name.toUpperCase()} Models</h1>
+                  <h1 className='font-raleway font-normal text-sm md:text-base lg:text-lg '>
+                  Click on the models to reveal related vehicle checks.
+                  </h1>
+                </div>
+                <div className="logo_src">
+                  <Image src={brand.logo_src} alt={brand.name} width={100} height={150} />
+                </div>
             </div>
 
             <div className="vehicles mt-12 flex flex-col gap-4">
