@@ -43,9 +43,9 @@ export default function BrandModels() {
             <PremiumChecks />
             <div className="flex items-start lg:items-center mr-4 md:mr-8 lg:mr-12 space-x-2 md:space-x-0">
                 <div className={` headerWords w-full flex flex-col text-start space-y-1 md:space-y-4 `}>
-                <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>All <Link href={`/popular_checks/${brand.name}`}>{brand.name.toUpperCase()}</Link> {model.model_name} Models </h1>
+                <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>All <Link href={`/popular_checks/${brand.name}`}>{brand.name.toUpperCase()}</Link> {model.model_name} Inspection </h1>
                 <h1 className='font-raleway font-normal text-sm md:text-base lg:text-lg '>
-                  Click on the models to reveal related vehicle checks.
+                  Click on the registration to view vehicle history.
                   </h1>
                 </div>
                 <div className="logo_src">

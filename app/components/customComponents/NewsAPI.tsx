@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, {useState, useEffect} from 'react'
 import slugify from 'slugify';
+import PostData from "../../../lib/data/postData.json"
 
 interface NewsArticle {
     id: string;
@@ -57,13 +58,36 @@ export default function NewsAPI() {
 
     if (error) {
         return (
-            <section className="flex flex-col justify-center items-center min-h-screen text-center">
-                <h1 className="text-red-500 text-2xl font-bold">Oops! Something went wrong.</h1>
-                <p className="text-gray-600">{error}</p>
-                <Button onClick={() => window.location.reload()} className="mt-4 bg-red-500 text-white">
-                    Try Again
-                </Button>
+            <section>
+                {PostData.map((article) => (          
+                    <div key={article.id}  className="an_article flex flex-col md:flex-row mb-12">
+                        <div className="image_section flex w-full h-[100%] md:w-[100%] rounded-sm overflow-hidden">
+                            <Link href={`/blogs/${article.id}`}>
+                            <Image className='object-cover w-[100%] h-[100%] overflow-hidden' src={article.image} alt="article image" width={400} height={400} />
+                            </Link>
+                        </div>
+                        <div className="text_section text-start block md:ml-4 mt-4 md:mt-0">
+                            <h1 className="text-ccOrange font-medium font-raleway line-spacing-[2%] text-base md:text-lg lg:text-2xl pb-2 md:pb-4">{article.title}</h1>
+                            <p className='font-montserrat font-light text-[9.2px] md:text-xs lg:text-sm italic'>{article.date}</p>
+                            <h4 className="content font-montserrat font-light tracking-wide text-xs md:text-sm py-2 md:py-4">
+                                {article.content}
+                            </h4>
+                            {/* <Link href={`/blogs/${article.id}`}> */}
+                            <Link href={`/blogs/1`}>
+                                <Button className='text-center rounded-full border border-ccOrange bg-white text-black hover:text-ccOrange hover:bg-white
+                                    text-xs md:text-sm lg:text-base'> Read More </Button>
+                            </Link>
+                        </div>
+                    </div>
+                ))}                
             </section>
+            // <section className="flex flex-col justify-center items-center min-h-screen text-center">
+            //     <h1 className="text-red-500 text-2xl font-bold">Oops! Something went wrong.</h1>
+            //     <p className="text-gray-600">{error}</p>
+            //     <Button onClick={() => window.location.reload()} className="mt-4 bg-red-500 text-white">
+            //         Try Again
+            //     </Button>
+            // </section>
         );
     }
     return (
@@ -85,7 +109,7 @@ export default function NewsAPI() {
                                     {article.content || 'No content available.'}
                                 </h4>
                                 {/* <Link href={`/blog/${encodeURIComponent(article.url)}`} passHref> */}
-                                <Link href={`/blog/${slugify(article.title, { lower: true, strict: true })}`} passHref>
+                                <Link href={`/blogs/${slugify(article.title, { lower: true, strict: true })}`} passHref>
                                     <Button className='text-center rounded-full border border-ccOrange bg-white text-black hover:text-ccOrange hover:bg-white
                                         text-xs md:text-sm lg:text-base'> Read More </Button>
                                 </Link>

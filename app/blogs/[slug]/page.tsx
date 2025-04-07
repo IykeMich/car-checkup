@@ -7,6 +7,8 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Star from '../../../public/images/star.svg'
 import slugify from 'slugify'
+import BlogPost from '../id/page';
+import PostData from '@/lib/data/postData.json';
 
 
 interface NewsArticle {
@@ -76,13 +78,16 @@ export default function BlogDetails() {
 
     if (error) {
         return (
-            <section className="flex flex-col justify-center items-center min-h-screen text-center">
-                <h1 className="text-red-500 text-2xl font-bold">Oops! Something went wrong.</h1>
-                <p className="text-gray-600">{error}</p>
-                <Button onClick={() => window.location.reload()} className="mt-4 bg-red-500 text-white">
-                    Try Again
-                </Button>
-            </section>
+        <main>
+          <BlogPost params={{ id:"1" }} />
+        </main>
+            // <section className="flex flex-col justify-center items-center min-h-screen text-center">
+            //     <h1 className="text-red-500 text-2xl font-bold">Oops! Something went wrong.</h1>
+            //     <p className="text-gray-600">{error}</p>
+            //     <Button onClick={() => window.location.reload()} className="mt-4 bg-red-500 text-white">
+            //         Try Again
+            //     </Button>
+            // </section>
         );
     }
 

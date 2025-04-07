@@ -15,10 +15,10 @@ const benefits = [
 ]
 
 export default function BlogPost({ params }: { params: { id: string } }) {
-  const article = PostData.find((post) => post.id.toString() === params.id);
-  // const article = PostData.find((post) => post.id === params.id);
+  const article_manual = PostData.find((post) => post.id.toString() === params.id);
+  // const article_manual = PostData.find((post) => post.id === params.id);
 
-  if (!article) {
+  if (!article_manual) {
     return notFound(); // Show 404 page if the blog post is not found
   }
 
@@ -27,21 +27,21 @@ export default function BlogPost({ params }: { params: { id: string } }) {
       <div className="h-1.5 bg-ccAsh w-full"></div>
       <main className="mb-16 px-4 md:px-12 lg:px-24">
         <div className="py-12 md:py-16">
-          <h1 className="text-ccOrange text-2xl md:text-3xl font-bold">{article.title}</h1>
-          <p className="text-gray-500 text-sm md:text-base italic mt-2">{article.date}</p>
+          <h1 className="text-ccOrange text-2xl md:text-3xl font-bold">{article_manual.title}</h1>
+          <p className="text-gray-500 text-sm md:text-base italic mt-2">{article_manual.date}</p>
           <div className="flex w-full gap-6">
 
             <div className="section1 md:w-[60vw] lg:w-[65vw]">
               <div className="w-full mt-6 rounded-none overflow-hidden">
               <Image
                 className="object-cover w-full h-auto md:w-[100%] md:h-[40vh] lg:h-[70vh] rounded-none"
-                src={article.image1}
-                alt={article.title}
+                src={article_manual.image1}
+                alt={article_manual.title}
                 width={50}
                 height={40}
                 />
               </div>
-              <p className="text-gray-700 text-base md:text-lg mt-6">{article.content}</p>
+              <p className="text-gray-700 text-base md:text-lg mt-6">{article_manual.content}</p>
             </div>
 
             {/* OPTIONAL SECTOR */}
@@ -84,40 +84,40 @@ export default function BlogPost({ params }: { params: { id: string } }) {
 
         <div className="second_writeup text-start mb-6 md:mb-12">
           <h2 className="font-raleway font-medium text-2xl lg:text-2xl py-2 md:pb-4">
-            {article.title2}
+            {article_manual.title2}
           </h2>
           <p className="font-poppins text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
-            {article.subtitle2}
+            {article_manual.subtitle2}
           </p>
         </div>
 
         <div className="third_writeup text-start mb-6 md:mb-12">
           <h2 className="font-raleway font-medium text-xl lg:text-2xl py-2 md:pb-4">
-            {article.title3}
+            {article_manual.title3}
           </h2>
           <p className="font-poppins text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
-            {article.subtitle3}
+            {article_manual.subtitle3}
           </p>
         </div>
 
         <div className="second_image mb-6 md:mb-12 w-full">
-        <Image className="w-full" src={article.image2} alt={article.title[12]} width={100} height={100}/>
+        <Image className="w-full" src={article_manual.image2} alt={article_manual.title[12]} width={100} height={100}/>
         </div>
 
         <div className="fourth_writeup text-start mb-6 md:mb-12">
           <h2 className="font-raleway font-medium text-xl lg:text-2xl py-2 md:pb-4">
-            {article.title4}
+            {article_manual.title4}
           </h2>
           <p className="font-poppins text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
-            {article.subtitle4}
+            {article_manual.subtitle4}
           </p>
         </div>
         <div className="fifth_writeup text-start mb-6 md:mb-12">
           <h2 className="font-poppins font-medium text-xl lg:text-2xl py-2 md:pb-4">
-            {article.title5}
+            {article_manual.title5}
           </h2>
           <p className="font-raleway text-gray-700 font-light text-sm lg:text-base md:pr-4 lg:pr-16 tracking-wide lg:tracking-normal leading-relaxed md:leading-normal">
-            {article.subtitle5}
+            {article_manual.subtitle5}
           </p>
         </div>
       </main>

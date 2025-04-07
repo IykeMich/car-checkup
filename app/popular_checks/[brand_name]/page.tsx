@@ -39,15 +39,15 @@ export default function ModelList() {
         <main className={`mx-3 md:mx-12 lg:mx-24 py-12`}>
 
             <PremiumChecks />
-            <div className="flex items-center md:mr-12">
-                <div className={` headerWords w-full flex flex-col text-start space-y-4 `}>
-                  <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>Popular {brand.name.toUpperCase()} Models</h1>
-                  <h1 className='font-raleway font-normal text-sm md:text-base lg:text-lg '>
-                  Click on the models to reveal related vehicle checks.
+            <div className="flex items-start lg:items-center md:mr-8 lg:mr-12 space-x-2 md:space-x-0">
+                <div className={` headerWords w-full flex flex-col text-start space-y-1 md:space-y-4 `}>
+                <h1 className='font-raleway font-semibold text-2xl md:text-3xl lg:text-4xl text-ccOrange'>Popular <Link href={`/popular_checks/${brand.name}`}>{brand.name.toUpperCase()}</Link>  Models </h1>
+                <h1 className='font-raleway font-normal text-sm md:text-base lg:text-lg '>
+                  Click on the models to reveals related vehicle checks.
                   </h1>
                 </div>
                 <div className="logo_src">
-                  <Image src={brand.logo_src} alt={brand.name} width={100} height={150} />
+                  <Image src={brand.logo_src} alt={brand.name} width={100} height={150} className="w-12 md:w-24 lg:w-36 h-auto" />
                 </div>
             </div>
 
