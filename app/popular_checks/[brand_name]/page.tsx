@@ -55,8 +55,8 @@ export default function ModelList() {
                 {/* {paginatedData.slice(0, showFullVehicle ? vehicles.length: 5).map((vehicle) => ( */}
                 {paginatedModels.map((a_brand, index) => (
                     <Link href={`/popular_checks/${encodeURIComponent(decodedBrandName)}/${encodeURIComponent(a_brand.model_name)}`} key={index}  className="vehicle inline-flex text-center group cursor-pointer">
-                        <div className="py-2 text-sm lg:text-base font-montserrat w-1/5  md:w-2/5 font-medium bg-[#FFC439] text-white group-hover:bg-green-600 group-hover:text-white">{a_brand.model_name}</div>
-                        <div className="py-2 text-sm lg:text-base font-raleway w-4/5 md:w-3/5 font-light border !border-s-none group-hover:bg-green-600 group-hover:text-white">{a_brand.vehicle_num} Vehicles have been Inspected</div>
+                        <div className="py-2 text-sm lg:text-base font-montserrat w-2/5 font-medium bg-[#FFC439] text-white group-hover:bg-green-600 group-hover:text-white">{a_brand.model_name}</div>
+                        <div className="py-2 text-sm lg:text-base font-raleway w-3/5 font-light border !border-s-none group-hover:bg-green-600 group-hover:text-white">{a_brand.vehicle_num} Vehicles have been Inspected</div>
                     </Link>
                 ))}
 
