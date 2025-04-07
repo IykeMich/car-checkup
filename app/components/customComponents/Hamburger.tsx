@@ -47,5 +47,5 @@ const navLinks: {name: string, url: string}[] = [
     {name: "Prices", url: "/prices"},
     {name: "Report", url: "/report"},
     {name: "Popular Checks", url: "/popular_checks"},
-    {name: "Contact us", url: "/contact_us"},
+    {name: "Contact us", url: "/contact"},
 ]

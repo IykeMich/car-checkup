@@ -21,7 +21,7 @@ const bgStyle = {
   ]
 export default function Hero() {
   return (
-    <main className='w-full h-screen relative' style={bgStyle}>
+    <main className='w-full h-screen md:h-auto relative' style={bgStyle}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#45526999]/70"></div>
 

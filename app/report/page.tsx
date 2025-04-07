@@ -1,26 +1,13 @@
-import { Button } from '@/components/ui/button'
 import Image from 'next/image';
 import React from 'react'
 import EnergyEfficiency from '../components/customComponents/EnergyEfficiency';
-
-const checks: string[] = [
-  "Buy 5 Premium Checks £29.88",
-  "Buy 5 Premium Checks £23.88",
-  "Buy 5 Premium Checks £11.93",
-]
+import PremiumChecks from "../components/customComponents/PremiumChecks"
 
 export default function SampleReport() {
   return (
     <section className='pt-12 md:pt-16'>
       <main className="py-12 px-4 md:px-12 lg:px-12">
-        <div className="3-buttons block md:flex justify-between space-y-4 md:space-y-0 md:gap-x-4 xl:gap-x-12 mb-12">
-          {checks.map((checkValue, index) => (
-            <Button key={index} 
-            className='bg-ccOrange font-montserrat font-semibold md:text-sm lg:text-base text-center py-6 md:py-8 md:w-1/3 w-full'>
-              {checkValue}
-            </Button>
-          ))}
-        </div>
+        <PremiumChecks />
 
         <div className="warning bg-[#BA3232] w-full text-center rounded-lg">
           <div className='py-8 text-white gap-2 leading-relaxed'>

@@ -5,7 +5,7 @@ import React from 'react'
 // import {toast} from "react-toastify"
 export default function ContactPage() {
   return (
-    <section className="pt-16 md:pt-24 lg:pt-36">
+    <section className="pt-24 lg:pt-36">
       <main className='px-4 md:px-12 lg:px-24'>
         <div className="words text-center lg:px-8">
           <h1 className="font-raleway font-semibold text-2xl lg:text-4xl text-ccOrange pb-6"> Contact Us </h1>
@@ -35,11 +35,11 @@ export default function ContactPage() {
                   <label htmlFor="your_phone_number" className="labelCustomStyle" > Phone Number </label>
                 </div>
                 <div className="relative bg-inherit w-full">
-                  <input type="textarea" name="your_message" id="your_message" className={`inputCustomStyle peer h-36`} />
+                  <textarea name="your_message" id="your_message" className={`inputCustomStyle peer resize-y`} rows={5} />
                   <label htmlFor="your_message" className="labelCustomStyle" > Message </label>
                 </div>
-                <div className="button-sector w-[70%]">
-                  <Button className='bg-ccOrange text-white p-6 font-raleway font-normal text-xl'>
+                <div className="button-sector w-full md:w-[50%]">
+                  <Button className='bg-ccOrange w-full text-white p-6 font-raleway font-normal text-xl'>
                     Contact Us
                   </Button>
                 </div>
