@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import Star from '../../../public/images/star.svg'
 import slugify from 'slugify'
 import BlogPost from '../id/page';
-import PostData from '@/lib/data/postData.json';
+// import PostData from '@/lib/data/postData.json';
 
 
 interface NewsArticle {
